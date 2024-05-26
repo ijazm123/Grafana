@@ -4,7 +4,9 @@ grafana:
       enabled: true
       host: smtp.gmail.com:587
       user: talktoijaz@gmail.com
-      password: tucgdmpkiaryxock
+      password: 
+        name: smtp-pass
+        key: password
       cert_file:
       key_file:
       from_address: talktoijaz@gmail.com
@@ -35,7 +37,9 @@ alertmanager:
           smarthost: smtp.gmail.com:587
           auth_username: talktoijaz@gmail.com
           auth_identity: talktoijaz@gmail.com
-          auth_password: tucgdmpkiaryxock
+          auth_password:
+            name: smtp-pass
+            key: password
           send_resolved: true
       templates:
       - '/etc/alertmanager/config/*.tmpl'
